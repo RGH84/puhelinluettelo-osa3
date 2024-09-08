@@ -1,5 +1,5 @@
-Osoite sovelluksen etusivulle: https://jk-phonebook-backend.fly.dev/
+App: https://jk-phonebook-backend.fly.dev/
 
-Info: https://jk-phonebook-backend.fly.dev//info
+Info: https://jk-phonebook-backend.fly.dev/info/
 
-Persons : https://jk-phonebook-backend.fly.dev/api/persons
+Persons : https://jk-phonebook-backend.fly.dev/api/persons/
