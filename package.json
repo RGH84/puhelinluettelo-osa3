@@ -5,7 +5,11 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "build:ui": "rm -rf /home/juho/koulu/fullharj/puhelinluettelo-osa3/dist && cd /home/juho/koulu/FullStack-HY/osa2/puhelinluettelo && npm run build && cp -r dist /home/juho/koulu/fullharj/puhelinluettelo-osa3/",
+    "deploy": "fly deploy",
+    "deploy:full": "npm run build:ui && npm run deploy",
+    "logs:prod": "fly logs"
   },
   "keywords": [
     "puhelinluettelo"
@@ -14,10 +18,13 @@
   "license": "MIT",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2",
+    "moment-timezone": "^0.5.45",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.8",
     "nodemon": "^3.1.4"
   }
 }
