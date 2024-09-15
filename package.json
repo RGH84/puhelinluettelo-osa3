@@ -9,7 +9,8 @@
     "build:ui": "rm -rf /home/juho/koulu/fullharj/puhelinluettelo-osa3/dist && cd /home/juho/koulu/FullStack-HY/osa2/puhelinluettelo && npm run build && cp -r dist /home/juho/koulu/fullharj/puhelinluettelo-osa3/",
     "deploy": "fly deploy",
     "deploy:full": "npm run build:ui && npm run deploy",
-    "logs:prod": "fly logs"
+    "logs:prod": "fly logs",
+    "lint": "eslint ."
   },
   "keywords": [
     "puhelinluettelo"
@@ -26,7 +27,12 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.10.0",
     "@flydotio/dockerfile": "^0.5.8",
+    "@stylistic/eslint-plugin-js": "^2.8.0",
+    "eslint": "^9.10.0",
+    "eslint-plugin-react": "^7.36.1",
+    "globals": "^15.9.0",
     "nodemon": "^3.1.4"
   }
 }
